@@ -1,0 +1,45 @@
+<!-- navegacion -->
+<nav class="navbar navbar-light p-2 fixed-top">
+    <div class="container-fluid">
+        <a class="nav-link active tam-nav-izq logo-anim" routerLink="/">
+            <img src="../../assets/images2/LogoMakr-8NODQ3.svg" class="nav-img-size-left" alt="logo">
+        </a>
+        <div class="btn-group nav-size-right menu-anim">
+            <div class="navbar-toggler bg-white p-2 rounded-pill d-flex justify-content-center" type="button"
+                data-bs-toggle="dropdown">
+                <i class="bi bi-person-lines-fill text-secondary opacity-50 dropdown-menu-icon-size"></i>
+                &nbsp;&nbsp;
+                <img src="../../assets/images2/sin_foto.png" class="rounded-circle nav-img-size-right" alt="avatar">
+            </div>
+            <ul class="shadow dropdown-menu dropdown-menu-end mt-2 border-index" *ngIf="!hasAuth">
+                <li><a class="dropdown-item p-3" (click)="openLogin('reservador')">Registrarme</a></li>
+                <li><a class="dropdown-item p-3" (click)="openLogin('reservador')">Iniciar sesión</a></li>
+                <li><a class="dropdown-item p-3" (click)="openLogin('propietario')">Trabaja con nosotros</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item p-3" (click)="openHelp()">Ayuda</a>
+                </li>
+            </ul>
+            <ul class="dropdown-menu dropdown-menu-end mt-2 border-index" aria-labelledby="dropdownMenu1" *ngIf="hasAuth">
+                <li class="dropdown dropdown-submenu dropstart">
+                        <a href="" class="dropdown-item p-2" data-bs-toggle="dropdown" id="dropdownMenu2">Reserva</a>
+                    <ul class="dropdown-menu dropdown-menu-start mt-2 border-index" aria-labelledby="dropdownMenu2" style="margin-left: -20rem;margin-bottom: 5rem;">
+                        <li><a href="" class="dropdown-item p-2">Realizar</a></li>
+                        <li><a href="" class="dropdown-item p-2">Historial</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="" class="dropdown-item p-2">Estadisticas</a></li>
+                    </ul>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="" class="dropdown-item p-2">Notificaciones</a></li>
+                <li><a href="" class="dropdown-item p-2">Mensajes</a></li>
+                    <li><a routerLink="reserver/account" class="dropdown-item p-2">Cuenta</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="" class="dropdown-item p-2">Ayuda</a></li>
+                <li><a href="" class="dropdown-item p-2" (click)="logOut()">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- /navegacion -->

@@ -1,0 +1,39 @@
+
+.icon-size{
+    font-size: 1.5em;
+}
+
+.nav-search-size{
+    width: 60em;
+}
+
+select{
+    background: transparent;
+    cursor: pointer;
+}
+
+select:focus{
+    outline: none;
+    outline-width: 0;
+    box-shadow: none;
+    background: var(--bg-color);
+    border-color: var(--bg-color);
+}
+
+.hov:hover{
+    background: var(--bg-color);
+    border-color: var(--bg-color);
+}
+
+.div-anim{
+    animation: animate-div 1s linear backwards .2s;
+}
+
+@keyframes animate-div {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%)
+    }
+}
